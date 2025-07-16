@@ -1,5 +1,5 @@
 {
-  "name": "@api/example-client",
+  "name": "@example-monorepo/example-client",
   "version": "0.0.1",
   "private": true
 }
