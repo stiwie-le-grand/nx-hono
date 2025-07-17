@@ -8,6 +8,9 @@
     },
     {
       "path": "./apps/example-client"
+    },
+    {
+      "path": "./apps/my-hono-app"
     }
   ]
 }

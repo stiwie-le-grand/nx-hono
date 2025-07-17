@@ -1,0 +1,41 @@
+{
+  "name": "@example-monorepo/my-hono-app",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "dev": "tsx watch src/main.ts",
+    "build": "tsc",
+    "start": "node dist/main.js"
+  },
+  "nx": {
+    "targets": {
+      "build": {
+        "executor": "nx:run-commands",
+        "outputs": [
+          "apps/my-hono-app/dist"
+        ],
+        "options": {
+          "command": "tsc",
+          "cwd": "apps/my-hono-app/node"
+        }
+      },
+      "serve": {
+        "executor": "nx:run-commands",
+        "options": {
+          "command": "PORT=3001 tsx watch index.ts",
+          "cwd": "apps/my-hono-app/node"
+        }
+      },
+      "start": {
+        "executor": "nx:run-commands",
+        "dependsOn": [
+          "build"
+        ],
+        "options": {
+          "command": "node dist/main.js",
+          "cwd": "apps/my-hono-app"
+        }
+      }
+    }
+  }
+}
