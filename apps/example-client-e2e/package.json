@@ -1,10 +1,10 @@
 {
-  "name": "@api/example-client-e2e",
+  "name": "@example-monorepo/example-client-e2e",
   "version": "0.0.1",
   "private": true,
   "nx": {
     "implicitDependencies": [
-      "@api/example-client"
+      "@example-monorepo/example-client"
     ]
   }
 }
