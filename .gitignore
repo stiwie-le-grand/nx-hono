@@ -47,11 +47,4 @@ vite.config.*.timestamp*
 vitest.config.*.timestamp*
 test-output
 
-**/.env
-**/.env.local
-**/.env.development
-**/.env.development.local
-**/.env.test
-**/.env.test.local
-**/.env.production
-**/.env.production.local
+**/.env*
