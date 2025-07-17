@@ -21,6 +21,7 @@
       },
       "serve": {
         "executor": "nx:run-commands",
+        "continuous": true,
         "options": {
           "command": "PORT=3001 tsx watch index.ts",
           "cwd": "apps/my-hono-app/node"

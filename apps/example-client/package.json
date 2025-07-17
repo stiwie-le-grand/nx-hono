@@ -1,5 +1,19 @@
 {
   "name": "@example-monorepo/example-client",
   "version": "0.0.1",
-  "private": true
+  "private": true,
+  "nx": {
+    "targets": {
+      "serve": {
+        "dependsOn": [
+          {
+            "projects": [
+              "my-hono-app"
+            ],
+            "target": "serve"
+          }
+        ]
+      }
+    }
+  }
 }
