@@ -14,6 +14,12 @@ export default defineConfig(() => ({
     host: 'localhost',
   },
   plugins: [react()],
+  define: {
+    // Inject environment variables
+    'process.env.VITE_BACKEND_URL': JSON.stringify(
+      process.env.VITE_BACKEND_URL || 'http://localhost:3001'
+    ),
+  },
   // Uncomment this if you are using workers.
   // worker: {
   //  plugins: [ nxViteTsPaths() ],

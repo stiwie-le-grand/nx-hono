@@ -13,7 +13,7 @@ app.use('/*', cors());
 configureOpenAPI(app);
 
 // Attach routes to main router's root path, it could also be attached to /api
-const routes = [colorsRouter, advancedColorsRouter];
+const routes = [colorsRouter /* advancedColorsRouter */];
 routes.forEach((route) => app.route('/', route));
 
 export default app;
